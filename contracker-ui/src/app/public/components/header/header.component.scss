@@ -1,0 +1,19 @@
+
+.toolbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #2889e3;
+  font-weight: 600;
+}
+
+.toolbar button {
+  color: white;
+  float: right;
+  background-color: transparent;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 8px;
+}

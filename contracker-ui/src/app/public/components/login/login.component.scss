@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+mat-card {
+  margin-top: -100px;
+  max-width: 600px;
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+
+    form {
+      .mat-form-field {
+        width: 100%;
+        min-width: 300px;
+      }
+
+      .error {
+        padding: 16px;
+        width: 300px;
+        color: white;
+        background-color: red;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
