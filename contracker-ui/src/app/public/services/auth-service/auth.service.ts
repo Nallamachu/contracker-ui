@@ -89,4 +89,8 @@ export class AuthService {
   loginStatusChange(): Observable<boolean> {
     return this.loggedIn.asObservable();
   }
+
+  isAuthenticated(){
+    return localStorage.getItem(LOCALSTORAGE_TOKEN_KEY)!=undefined?true:false;
+  }
 }
