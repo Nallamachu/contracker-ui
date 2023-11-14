@@ -61,6 +61,22 @@ export class AuthService {
     // );
   }
 
+  logout(): Observable<LoginResponse> {
+    return of(fakeLoginResponse).pipe(
+      tap((res: LoginResponse) => localStorage.removeItem(LOCALSTORAGE_TOKEN_KEY)),
+      tap(() => this.loggedIn.next(false)),
+      tap(() => this.snackbar.open('Logout Successfull', 'Close', {
+        duration: 2000, horizontalPosition: 'right', verticalPosition: 'top'
+      }))
+    );
+    // return this.http.post<LoginResponse>('/api/auth/login', loginRequest).pipe(
+    // tap((res: LoginResponse) => localStorage.setItem(LOCALSTORAGE_TOKEN_KEY, res.accessToken)),
+    // tap(() => this.snackbar.open('Login Successfull', 'Close', {
+    //  duration: 2000, horizontalPosition: 'right', verticalPosition: 'top'
+    // }))
+    // );
+  }
+
   /*
    The `..of()..` can be removed if you have a real backend, at the moment, this is just a faked response
   */
