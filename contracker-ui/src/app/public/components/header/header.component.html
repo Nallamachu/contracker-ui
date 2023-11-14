@@ -7,6 +7,6 @@
     <button mat-button *ngIf="isAuthenticated" [routerLink]="['dashboard']">Dashboard</button>
     <button mat-button *ngIf="isAuthenticated">Site</button>
     <button mat-button *ngIf="isAuthenticated">Equipment</button>
-    <button mat-button *ngIf="isAuthenticated" [routerLink]="['login']">Logout</button>
+    <button mat-button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
   </div>
 </div>
