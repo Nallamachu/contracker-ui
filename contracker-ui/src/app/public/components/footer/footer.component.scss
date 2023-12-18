@@ -1,15 +1,4 @@
-app-footer{
-    position: fixed;
-    height: 50px;
-    background-color: red;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-}
-
 .toolbar {
-    height: 60px;
     display: flex;
     align-items: center;
     background-color: #1e4b4f;
@@ -17,7 +6,7 @@ app-footer{
     color: white;
     justify-content: center;
     position: fixed;
-    height: 50px;
+    height: 5vh;
     bottom: 0px;
     left: 0px;
     right: 0px;

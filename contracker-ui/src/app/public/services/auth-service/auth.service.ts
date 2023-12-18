@@ -1,13 +1,13 @@
-import { LOCALSTORAGE_TOKEN_KEY } from './../../../app.module';
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, ReplaySubject, Subject, switchMap, tap } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginRequest, LoginResponse, RegisterRequest, RegisterResponse } from '../../interfaces';
+import { LOCALSTORAGE_TOKEN_KEY } from 'src/app/constants';
 
 export const fakeLoginResponse: LoginResponse = {
-  // fakeAccessToken.....should all come from real backend
   accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
   refreshToken: {
     id: 1,
@@ -36,7 +36,7 @@ export class AuthService {
     private jwtService: JwtHelperService
   ) { }
 
-  private loggedIn: Subject<boolean> = new ReplaySubject<boolean>(1);
+  private   loggedIn: Subject<boolean> = new ReplaySubject<boolean>(1);
 
   /*
    Due to the '/api' the url will be rewritten by the proxy, e.g. to http://localhost:8080/api/auth/login
@@ -104,6 +104,7 @@ export class AuthService {
 
   loginStatusChange(): Observable<boolean> {
     return this.loggedIn.asObservable();
+    //return localStorage.getItem(LOCALSTORAGE_TOKEN_KEY)!=undefined?of(true):of(false);
   }
 
   isAuthenticated(){

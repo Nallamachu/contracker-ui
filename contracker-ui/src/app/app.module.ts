@@ -19,9 +19,8 @@ import { RegisterComponent } from './public/components/register/register.compone
 
 import { JwtModule } from '@auth0/angular-jwt';
 import { FooterComponent } from './public/components/footer/footer.component';
+import { LOCALSTORAGE_TOKEN_KEY } from './constants';
 
-// specify the key where the token is stored in the local storage
-export const LOCALSTORAGE_TOKEN_KEY = 'angular_material_login_and_register_example';
 
 // specify tokenGetter for the angular jwt package
 export function tokenGetter() {

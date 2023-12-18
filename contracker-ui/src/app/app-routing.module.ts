@@ -4,6 +4,8 @@ import { AuthGuard } from './auth-guard/auth.guard';
 import { LoginComponent } from './public/components/login/login.component';
 import { RegisterComponent } from './public/components/register/register.component';
 import { DashboardComponent } from './protected/dashboard/dashboard.component';
+import { SiteComponent } from './protected/site/site.component';
+import { EquipmentComponent } from './protected/equipment/equipment.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'site',
+    component: SiteComponent
+  },
+  {
+    path: 'equipment',
+    component: EquipmentComponent
   },
   {
     path: '**',

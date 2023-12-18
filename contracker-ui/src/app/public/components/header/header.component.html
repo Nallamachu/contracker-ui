@@ -1,12 +1,12 @@
 <div role="banner">
   <div class="toolbar">
-    <span>CONTRACKER</span>
+    <span>{{appName}}</span>
     <span class="spacer"></span>
-    <button mat-button *ngIf="!isAuthenticated" [routerLink]="['login']">Login</button>
-    <button mat-button *ngIf="!isAuthenticated" [routerLink]="['register']">Register</button>
-    <button mat-button *ngIf="isAuthenticated" [routerLink]="['dashboard']">Dashboard</button>
-    <button mat-button *ngIf="isAuthenticated">Site</button>
-    <button mat-button *ngIf="isAuthenticated">Equipment</button>
+    <button mat-button *ngIf="!isAuthenticated" routerLink="login">Login</button>
+    <button mat-button *ngIf="!isAuthenticated" routerLink="register">Register</button>
+    <button mat-button *ngIf="isAuthenticated" routerLink="dashboard">Dashboard</button>
+    <button mat-button *ngIf="isAuthenticated" routerLink="site">Site</button>
+    <button mat-button *ngIf="isAuthenticated" routerLink="equipment">Equipment</button>
     <button mat-button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
   </div>
 </div>

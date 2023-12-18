@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: -6vh 0px;
+  }
+
+  .flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: linear-gradient(#1e4b4f, transparent),
+    linear-gradient(to top left, green, transparent),
+    linear-gradient(to top right, blue, transparent);
+    color: White;
+    margin: 0.5rem;
+    justify-content: center;
+  }
+  
+  mat-card {
+    height: 30vh;
+    width: 15vw;
+  }

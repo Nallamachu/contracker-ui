@@ -1,0 +1,50 @@
+<mat-tab-group dynamicHeight>
+    <mat-tab label="Active Sites">
+        <ng-template matTabContent>
+            <table mat-table [dataSource]="getActiveSites()" class="mat-elevation-z8 data-table">
+                <ng-container matColumnDef="site">
+                    <th mat-header-cell *matHeaderCellDef> Site </th>
+                    <td mat-cell *matCellDef="let site"> {{site.site}} </td>
+                </ng-container>
+                <ng-container matColumnDef="engineer">
+                    <th mat-header-cell *matHeaderCellDef> Engineer </th>
+                    <td mat-cell *matCellDef="let site"> {{site.engineer}} </td>
+                </ng-container>
+                <ng-container matColumnDef="company">
+                    <th mat-header-cell *matHeaderCellDef> Company </th>
+                    <td mat-cell *matCellDef="let site"> {{site.company}} </td>
+                </ng-container>
+                <ng-container matColumnDef="contact">
+                    <th mat-header-cell *matHeaderCellDef> Contact </th>
+                    <td mat-cell *matCellDef="let site"> {{site.contact}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="All Sites">
+        <ng-template matTabContent>
+            <table mat-table [dataSource]="getAllSites()" class="mat-elevation-z8 demo-table">
+                <ng-container matColumnDef="site">
+                    <th mat-header-cell *matHeaderCellDef> Site </th>
+                    <td mat-cell *matCellDef="let site"> {{site.site}} </td>
+                </ng-container>
+                <ng-container matColumnDef="engineer">
+                    <th mat-header-cell *matHeaderCellDef> Engineer </th>
+                    <td mat-cell *matCellDef="let site"> {{site.engineer}} </td>
+                </ng-container>
+                <ng-container matColumnDef="company">
+                    <th mat-header-cell *matHeaderCellDef> Company </th>
+                    <td mat-cell *matCellDef="let site"> {{site.company}} </td>
+                </ng-container>
+                <ng-container matColumnDef="contact">
+                    <th mat-header-cell *matHeaderCellDef> Contact </th>
+                    <td mat-cell *matCellDef="let site"> {{site.contact}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>

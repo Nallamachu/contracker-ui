@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: -10vh 0px;
+}
+
+data-table {
+  justify-content: center;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
