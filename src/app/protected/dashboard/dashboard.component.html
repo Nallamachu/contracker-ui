@@ -1,0 +1,31 @@
+<div>
+    <h2>Sites:</h2>
+    <mat-card class="flex-me" *ngFor="let site of sites">
+        <mat-card-header>
+          <mat-card-title>{{site.site}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div>
+            <p>{{site.company}}</p>
+            <p>{{site.engineer}}</p>
+            <p>{{site.contact}}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    <h2>Equipments:</h2>
+    <mat-card class="flex-me" *ngFor="let equipment of equipments">
+        <mat-card-header>
+          <mat-card-title>{{equipment.brand}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div>
+            <p>{{equipment.chasis}}</p>
+            <p>{{equipment.engine}}</p>
+            <p>{{equipment.model}}</p>
+            <p>{{equipment.type}}</p>
+            <p>{{equipment.hp}}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+</div>
+  

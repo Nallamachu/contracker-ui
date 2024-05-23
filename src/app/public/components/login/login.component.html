@@ -1,0 +1,31 @@
+<div>
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content class="mat-card">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+
+        <mat-form-field class="mat-form-field">
+          <input type="email" matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="this.loginForm.get('email')?.touched && this.loginForm.get('email')?.hasError('required')">
+            Email is required</mat-error>
+          <mat-error *ngIf="this.loginForm.get('email')?.touched && this.loginForm.get('email')?.hasError('email')">
+            Email must be a valid Email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field">
+          <input type="password" matInput placeholder="Password" formControlName="password">
+          <mat-error
+            *ngIf="this.loginForm.get('password')?.touched && this.loginForm.get('password')?.hasError('required')">
+            Password is required</mat-error>
+        </mat-form-field>
+
+        <div class="button">
+          <a mat-button [routerLink]="['../register']">Go to Register</a>
+          <!-- Button is disabled(not clickable), if our LoginForm contains Validation Errors -->
+          <button type="submit" mat-button [disabled]="!loginForm.valid">Login</button>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
